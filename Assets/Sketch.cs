@@ -11,17 +11,12 @@ public class Sketch : MonoBehaviour
 	{
 		string jsonResponse = Request.GET(_WebsiteURL);
 
-		//Just in case something went wrong with the request we check the reponse and exit if there is no response.
 		if (string.IsNullOrEmpty(jsonResponse))
 		{
 			return;
 		}
 
 		Assignment3[] lists = JsonReader.Deserialize<Assignment3[]>(jsonResponse);
-
-		//----------------------
-		//YOU WILL NEED TO DECLARE SOME VARIABLES HERE SIMILAR TO THE CREATIVE CODING TUTORIAL
-		//int totalCubes = 30;
 		int totalCubes = lists.Length;
 		int i = 0;
 		float totalDistance = 2.9f;
@@ -29,6 +24,7 @@ public class Sketch : MonoBehaviour
 		//We can now loop through the array of objects and access each object individually
 		foreach (Assignment3 card in lists)
 		{
+			/* njad144 */
 			float perc = i / (float)totalCubes / 3;
 			float sin = Mathf.Sin(perc * Mathf.PI / 2);
 			float x = 1.8f + sin * totalDistance;
@@ -61,6 +57,7 @@ public class Sketch : MonoBehaviour
 					cubeText.color = Color.white;
 					break;
 			}
+			/* njad144 */
 
 			i++;
 		}

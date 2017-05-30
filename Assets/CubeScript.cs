@@ -7,8 +7,10 @@ public class CubeScript : MonoBehaviour {
 	public float rotateSpeed = 1.0f;
 	public Vector3 spinSpeed = Vector3.zero;
 	Vector3 spinAxis = new Vector3(0, 1, 0);
+	/* njad144 */
 	Quaternion initRotation;
 	public Assignment3 cubesData;
+	/* njad144 */
 
 	// Use this for initialization
 	//Runs once at startup
@@ -16,22 +18,25 @@ public class CubeScript : MonoBehaviour {
 		spinSpeed = new Vector3(Random.value, Random.value, Random.value);
 		spinAxis = Vector3.up;
 		spinAxis.x = (Random.value - Random.value) * .1f;
-		//njad144 Get initial rotation for text so we can constantly keep it at a readable level, and not follow cube rotation.
+		/* njad144 */
+		//Get initial rotation for text so we can constantly keep it at a readable level, and not follow cube rotation.
 		initRotation = GetComponentInChildren<TextMesh>().transform.rotation;
+		/* njad144 */
 	}
-	
-	//njad144 So that every cube can be associated with its own card data. Called from Sketch after instantiation.
+
+	/* njad144 So that every cube can be associated with its own card data. Called from Sketch after instantiation. */
 	public void SetData(Assignment3 data)
 	{
 		this.cubesData = data;
 	}
+	/* njad144 */
 
 	public void SetSize(float size)
 	{
 		this.transform.localScale = new Vector3(size, size, size);
 	}
 
-	//njad144 Clicking any cube will expand information in the panel.
+	/* njad144 Clicking any cube will expand information in the panel. */
 	public void OnMouseDown()
 	{
 		string message;
@@ -47,6 +52,7 @@ public class CubeScript : MonoBehaviour {
 
 		FindObjectOfType<TextScript>().setCanvasText(message);
 	}
+	/* njad144 */
 
 	// Update is called once per frame
 	//Animation loop
