@@ -46,10 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Assignment3.cs" />
      <Compile Include="Assets\CubeScript.cs" />
      <Compile Include="Assets\Product.cs" />
      <Compile Include="Assets\Sketch - OLD.cs" />
      <Compile Include="Assets\Sketch.cs" />
+     <Compile Include="Assets\TextScript.cs" />
      <Compile Include="Assets\WebRequest.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
