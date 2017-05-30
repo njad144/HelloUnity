@@ -20,7 +20,7 @@ public class CubeScript : MonoBehaviour {
 		initRotation = GetComponentInChildren<TextMesh>().transform.rotation;
 	}
 	
-	//So that every cube can be associated with its own card data.
+	//njad144 So that every cube can be associated with its own card data. Called from Sketch after instantiation.
 	public void SetData(Assignment3 data)
 	{
 		this.cubesData = data;

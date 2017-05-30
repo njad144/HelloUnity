@@ -9,7 +9,7 @@ public class TextScript : MonoBehaviour {
 	void Start () {
 	}
 
-	//Lets CubeScript set the canvas text.
+	//njad144 Lets CubeScript set the canvas text.
 	public void setCanvasText(string message)
 	{
 		GetComponentInChildren<Text>().text = message;
