@@ -35,6 +35,7 @@ public class Sketch : MonoBehaviour
 			var newCube = (GameObject)Instantiate(myPrefab, new Vector3(x, y, z), Quaternion.identity);
 			CubeScript cubeScript = newCube.GetComponent<CubeScript>();
 			TextMesh cubeText = newCube.GetComponentInChildren<TextMesh>();
+
 			cubeScript.SetData(card);
 			cubeScript.SetSize(.45f * (1.0f - perc));
 			cubeScript.rotateSpeed = .2f + perc * 4.0f; // perc;// Random.value;
@@ -46,15 +47,19 @@ public class Sketch : MonoBehaviour
 			{
 				case "Ass3ToDo":
 					cubeText.color = Color.red;
+					cubeScript.SetColor(Color.red);
 					break;
 				case "Ass3Doing":
 					cubeText.color = Color.yellow;
+					cubeScript.SetColor(Color.yellow);
 					break;
 				case "Ass3Done":
 					cubeText.color = Color.green;
+					cubeScript.SetColor(Color.green);
 					break;
 				default:
 					cubeText.color = Color.white;
+					cubeScript.SetColor(Color.white);
 					break;
 			}
 			/* njad144 */

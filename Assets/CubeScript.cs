@@ -31,6 +31,13 @@ public class CubeScript : MonoBehaviour {
 	}
 	/* njad144 */
 
+	/* njad144 methodd to set the colour of the cube */
+	public void SetColor (Color color)
+	{
+		this.GetComponent<Renderer>().material.color = color;
+	}
+	/* njad144 */
+
 	public void SetSize(float size)
 	{
 		this.transform.localScale = new Vector3(size, size, size);
